@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const soundSourceLink = "get-sounds.php";
 
     // Sounds dynamisch laden
-    fetch(soundSourceLink)
+    fetch(soundSourceLink, {
+        method: 'GET'
+    })
         .then(response => response.json())
         .then(sounds => {
             // Wenn ein Fehler auftritt, gibt das PHP-Skript ein "error"-Feld zurück
