@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Musik Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="player-container">
+        <h2>Musik-Player</h2>
+        <ul id="sound-list">
+            <!-- Dynamische Liste der Sounds wird hier geladen -->
+        </ul>
+        <div class="controls">
+            <button id="playPauseBtn">Play</button>
+            <input type="range" id="seekBar" value="0" min="0">
+            <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1">
+        </div>
+        <audio id="audioPlayer" preload="metadata"></audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
